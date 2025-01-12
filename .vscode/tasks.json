@@ -1,0 +1,23 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build-gtk",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "main.c",
+                "-o",
+                "gtk_app",
+                "`pkg-config",
+                "--cflags",
+                "--libs",
+                "gtk+-3.0`"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        }
+    ]
+}

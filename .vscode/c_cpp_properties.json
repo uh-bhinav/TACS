@@ -1,0 +1,29 @@
+{
+    "version": 4,
+    "configurations": [
+        {
+            "name": "macOS",
+            "includePath": [
+                "${workspaceFolder}/**",          // Include workspace headers
+                "/usr/local/include",             // General include path (for some installs)
+                "/opt/homebrew/include",         // Path for ARM64 architecture (ncurses installed via Homebrew)
+                "/opt/homebrew/opt/ncurses/include"  // Specific path for ncurses headers if using Homebrew
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/clang",     // Path to the C compiler
+            "cStandard": "c11",                   // Set C standard (you can change this to c99, c11, etc.)
+            "cppStandard": "c++11",               // Set C++ standard (optional)
+            "intelliSenseMode": "macos-clang-arm64",  // IntelliSense mode for ARM64 macOS
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**",
+                    "/usr/local/include",
+                    "/opt/homebrew/include"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ]
+}
+
+
